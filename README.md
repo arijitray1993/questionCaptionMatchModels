@@ -3,7 +3,17 @@
 Code for identifying True vs False Premise questions for a given image as described in the paper, Question Relevance in VQA:
 Identifying Non-Visual And False-Premise Questions,  https://arxiv.org/pdf/1606.06622v2.pdf
 
-How to run the code:
+##Prerequisites:
+
+- After cloning the repository, go inside folder.
+
+- ```mkdir w2vmodel```
+
+- Download the Google Word2Vec Dictionary from here: https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit .
+
+- Extract the compressed file and place the dictionary file inside ```w2vmodel/``` folder. 
+
+##How to run the code:
 
 ```python questionCaptionModel.py --captype [option1] --model [option2] --loadweights [option3] --saveModel [option4]```
 
