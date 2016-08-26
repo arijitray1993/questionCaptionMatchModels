@@ -232,7 +232,7 @@ def train_model(X_train, y_train, loadWeights=None):
 		model.load_weights(loadWeights) #600in,200,150,10,1
 	else:
 		print "Training Model..."
-		model.fit(X_train,y_train, nb_epoch=20, show_accuracy=True)
+		model.fit(X_train,y_train, nb_epoch=30, show_accuracy=True)
 	return model
 
 def train_model_naive(X_train, y_train, vocab, loadWeights=None):
@@ -252,7 +252,7 @@ def train_model_naive(X_train, y_train, vocab, loadWeights=None):
 		model.load_weights(loadWeights) #600in,200,150,10,1
 	else:
 		print "Training Model..."
-		model.fit(X_train,y_train, nb_epoch=20, show_accuracy=True)
+		model.fit(X_train,y_train, nb_epoch=9, show_accuracy=True)
 	return model
 
 
@@ -302,7 +302,7 @@ def train_model_lstm(X_train_ques, X_train_cap, y_train, loadWeights=None):
 			for i in range(0,len(X_train_ques)):
 				decoder.fit([np.asarray([X_train_ques[i]]), np.asarray([X_train_cap[i]])], np.asarray([y_train[i]]), nb_epoch=1)
 		'''
-		decoder.fit([X_train_ques,X_train_cap], y_train, nb_epoch=35)
+		decoder.fit([X_train_ques,X_train_cap], y_train, nb_epoch=38)
 	
 	return decoder
 
